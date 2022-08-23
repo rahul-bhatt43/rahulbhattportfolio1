@@ -552,13 +552,13 @@ nav .bi {
         top: 690%;
     }
 }
-@media only screen and (max-width: 412px) { /* s20 ultra*/
-    .open-popup{
-        top: 560%;
-    }
-}
 @media only screen and (max-width: 390px) { /* Ihone 12*/
     .open-popup{
         top: 590%;
+    }
+}
+@media only screen and (max-width: 412px) { /* s20 ultra*/
+    .open-popup{
+        top: 560%;
     }
 }
