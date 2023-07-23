@@ -17,7 +17,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.png);
+    background-image: url(images/background.svg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -74,10 +74,14 @@ nav ul li a:hover::after {
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
+    color: hotpink;
+}
+.header-text p{
+    color: crimson;
 }
 
 .header-text h1 span {
-    color: #f7309d;
+    color: #f76e30;
 }
 
 /* about section */
@@ -376,7 +380,7 @@ nav .bi {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(images/phone-background.png);
+        background-image: url(images/phone-background.gif);
     }
 
     .header-text {
