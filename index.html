@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the Portfolio Website of the Rahul~Bhatt created by him, for the official ussage.">
+    <meta name="description"
+        content="This is the Portfolio Website of the Rahul~Bhatt created by him, for the official ussage.">
     <title>Rahul Bhatt | Portfolio Website</title>
     <link rel="stylesheet" href="custom.css">
     <script src="https://kit.fontawesome.com/31c0d71004.js" crossorigin="anonymous"></script>
@@ -14,9 +15,11 @@
 
 <body>
     <div id="progress">
-        <span id="progress-value"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-</svg></span>
+        <span id="progress-value"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            </svg></span>
     </div>
     <div id="header">
         <div class="container">
@@ -75,7 +78,8 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Jul 2023 - Current</span><br>Intern at Excellence Technology[Mohali- Phase 8](M.E.R.N Stack Developer)</li>
+                            <li><span>Jul 2023 - Current</span><br>Intern at Excellence Technology[Mohali- Phase
+                                8](M.E.R.N Stack Developer)</li>
                             <li><span>Jul 2021 - Current</span><br>Owner of Mr.Coder(An educational Content Blog
                                 Website)</li>
                             <li><span>Mar 2012 - April 2022</span><br>Oasis Infobyte- Web Developer and Designing
@@ -233,7 +237,7 @@
                     <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
+                    <form name="submit-to-google-sheet" id="form">
                         <input type="text" name="Name" placeholder="Your Name *" required>
                         <input type="email" name="Email" placeholder="Your Email *" required>
                         <input type="number" name="Phone" placeholder="Your Phone Number">
@@ -244,7 +248,7 @@
                             <img src="tick.png" alt="">
                             <h2>Thank You!</h2>
                             <p>Your details has been successfully submitted. Thanks!</p>
-                            <button type="button" onclick="closePopup()">OK</button>
+                            <button type="button" onclick="closePopup()" id="submit">OK</button>
                         </div>
                     </form>
                     <span id="msg"></span>
@@ -285,15 +289,17 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwfTRMO0wxlbFNBAZH8TR_TAwLgwoQwWsaziK_rJZ1qdaX2Gk3LmUUhl6hpfkPcP2B86w/exec'
-        const form = document.forms['submit-to-google-sheet']
 
-        const msg = document.getElementById("msg")
+    <script>
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz-7KIhd3olSSyijz-b_mpGhLOHDuCiv1qYZJBdD5duZoqjyD8QYql-i3fLHOhTawuZcg/exec'
 
         form.addEventListener('submit', e => {
+            submitButton.disabled = true
             e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            let requestBody = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: requestBody })
                 .then(response => {
                     msg.innerHTML = "Message Sent successfully ✅"
                     setTimeout(function () {
@@ -301,7 +307,12 @@
                     }, 5000)
                     form.reset()
                 })
-                .catch(error => console.error('Error!', error.message))
+                .catch(error => {
+                    alert('Error!', error.message)
+                    submitButton.disabled = false
+
+                }
+                )
         })
     </script>
 
@@ -328,18 +339,7 @@
         window.onscroll = calcScrollValue;
         window.onload = calcScrollValue;
     </script>
-    
-    <script>
-        let popup = document.getElementById("popup");
-        function openPopup() {
-            // change the 3 main properties of the popup class
-            popup.classList.add("open-popup"); // new class
-        }
-        function closePopup() {
-            // change the 3 main properties of the popup class
-            popup.classList.remove("open-popup"); // remove the new class
-        }
-    </script>
+
 
 </body>
 
