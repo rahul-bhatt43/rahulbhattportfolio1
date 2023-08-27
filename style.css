@@ -10,8 +10,8 @@ html {
 }
 
 body {
-    background: #080808;
-    color: #fff;
+    background: #e63946;
+    color: #f1faee;
 }
 
 #header {
@@ -55,7 +55,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #f76e30;
+    background: #1d3557;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -74,20 +74,21 @@ nav ul li a:hover::after {
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
-    color: hotpink;
+    color: #ffee32;
 }
 .header-text p{
-    color: crimson;
+    color: greenyellow;
 }
 
 .header-text h1 span {
-    color: #f76e30;
+    -webkit-text-stroke: 2px yellowgreen;
+    -webkit-text-fill-color: transparent;
 }
 
 /* about section */
 #about {
     padding: 80px 0;
-    color: #ababab;
+    color: #ffbe0b;
 }
 
 .row {
@@ -126,13 +127,15 @@ nav ul li a:hover::after {
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: antiquewhite;
+    font-weight: 600;
 }
 
 .tab-links::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #f76e30;
+    background: #1d3557;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -149,8 +152,9 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #2aefb8;
+    color: #0d1b2a;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .tab-contents {
@@ -175,6 +179,7 @@ nav ul li a:hover::after {
 
 .services-list div {
     background: #262626;
+    color: #ffbe0b;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -202,7 +207,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover {
-    background: #f76e30;
+    background: #1d3557;
     transform: translateY(-10px);
 }
 
@@ -234,7 +239,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #f76e30);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #1d3557);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -280,7 +285,7 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #f76e30;
+    border: 1px solid #1d3557;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -289,7 +294,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: #f76e30;
+    background: #1d3557;
 }
 
 /* contact section */
@@ -309,7 +314,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left p svg {
-    color: #f76e30;
+    color: #1d3557;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -328,13 +333,15 @@ nav ul li a:hover::after {
 }
 
 .social-icons a:hover {
-    color: #f73030;
+
+    color: #1d3557;
     transform: translateY(-5px);
 }
 
 .btn.btn2 {
     display: inline-block;
-    background: #f76e30;
+
+    background: #1d3557;
 
 }
 
